@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Concert+One');
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Nova+Mono');
 
 body {
     height: 100%;
@@ -47,7 +47,7 @@ body {
 .health {
     position: relative;
     top: calc(50% - 12px);
-    left: calc(50% - 200px); 
+    left: calc(50% - 200px);
     background: #54eb54;
     height: 24px;
     max-width: 400px;
@@ -144,6 +144,8 @@ body {
     text-align: center;
     font-size: 70px;
     letter-spacing: 5px;
+    font-family: 'Nova Mono', monospace;
+    color: #FFF; /*เอาสีดำลบแถวนี้*/
 }
 
 .gamebox {
@@ -155,4 +157,3 @@ body {
     height: 180px;
     margin: 20px;
 }
-
