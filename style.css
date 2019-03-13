@@ -97,7 +97,7 @@ a:hover {
     color: white;
     width: 10%;
     margin-top: 15%;
-    font-size: 10vmax;
+    font-size: 6vmax;
 }
 
 .rightturn:hover {
@@ -107,8 +107,8 @@ a:hover {
 #statusmode {
     display: inline-block;
     color: black;
-    width: 60%;
-    font-size: 10vmax;
+    width: 45%;
+    font-size: 6vmax;
     background: #00a800;
     border: 1.5vmin solid white;
     border-radius: 10px;
