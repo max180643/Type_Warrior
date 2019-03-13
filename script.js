@@ -19,11 +19,12 @@ function setGame() {
     bossHp = 100;
     health.style.width = 100 + "%";
     myHp = 100;
+    myhealth.style.width = 100 + "%";
 }
 
 function random() {
     words.innerHTML = ""
-    var random = Math.floor(Math.random() * 1943 - 0 + 1);
+    var random = Math.floor(Math.random()*10000)%1943;
     var wordArray = wordlist[random].split("");
     for (var i = 0; i < wordArray.length; i++) {
         var span = document.createElement("span");
@@ -103,7 +104,31 @@ function updateTime(){
         time = 4;
         random();
     }
+}
 
+function delaystart() {
+    var firstdelay = 2;
+    document.getElementById("mainmenu").style.display = "none";
+    document.getElementById("game").style.display = "block";
+    document.getElementById("gamebox").style.display = "none";
+    document.getElementById("startdelay").style.display = "block";
+    document.getElementById("gamewin").style.display = "none";
+    document.getElementById("gameover").style.display = "none";
+    ds = setInterval(
+        function(){
+            if (firstdelay <= 0) {
+                clearInterval(ds);
+                startgame();
+                document.getElementById("gamebox").style.display = "block";
+                document.getElementById("startdelay").style.display = "none";
+                startdelay.innerText = 3;
+            }
+            else{
+                startdelay.innerText = firstdelay;
+                firstdelay -= 1;
+            }
+        }
+        ,1000)
 }
 
 function startgame() {

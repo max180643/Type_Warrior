@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 body {
-    height: 100%;
-    width: 100%;
     background-image: url(./img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Concert One', cursive;
 }
 
 a {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     padding: 1%;
     border: 2px solid #86d9ff;
     border-radius: 10px;
@@ -20,6 +21,20 @@ a {
 a:hover {
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 30px #03A9F4;
+}
+
+#gameover a {
+    border: 2px solid #e80000;
+    box-shadow: 0px 0px 20px #ff0000;
+    color: white;
+    text-shadow: 0px 0px 10px #ff0000;
+}
+
+#gamewin a {
+    border: 2px solid #00e800;
+    box-shadow: 0px 0px 20px #00ff00;
+    color: white;
+    text-shadow: 0px 0px 10px #00ff00;
 }
 
 #game {
@@ -80,6 +95,7 @@ a:hover {
 }
 
 .popup {
+    font-size: 1.5vmax;
     margin: 7% auto;
     padding: 20px;
     background: #fff;
@@ -90,7 +106,7 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0px 0px 20px #03A9F4;
     position: relative;
-    transition: all 5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .popup h1 {
@@ -111,6 +127,20 @@ a:hover {
 .popup .content {
     max-height: 70%;
     overflow: auto;
+}
+
+#startdelay {
+    font-size: 20vmax;
+    color: white;
+    position: absolute;
+    left: calc(50% - 4.5vmax);
+    top: calc(50% - 12vmax);
+    animation: titletime 1s infinite ease-in-out;
+}
+
+@keyframes titletime {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 #gamewin {
@@ -251,63 +281,17 @@ a:hover {
     letter-spacing: 5px;
 }
 
-#name {
-    text-align: center;
+.words {
+    margin: 0px;
 }
 
-#description {
-    text-align: center;
+.time {
+    margin: auto;
+    color: white;
 }
 
-#buttonStart {
-    position: absolute;
-    top: 60%;
-    left: calc(50% - 47.625px);
-    border: none;
-    background-color: rgb(78, 236, 141);
-    box-shadow: 0px 5px 0px 0px rgb(49, 204, 111);
-    outline: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#buttonHowto {
-    position: absolute;
-    top: 75%;
-    left: calc(50% - 93.805px);
-    border: none;
-    background-color: #FF7373;
-    box-shadow: 0px 5px 0px 0px #CE4646;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#buttonGame {
-    position: absolute;
-    top: 85%;
-    left: calc(50% - 47.625px);
-    border: none;
-    background-color: #FF7373;
-    box-shadow: 0px 5px 0px 0px #CE4646;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#button:active {
-    transform: translate(0px, 5px);
-    box-shadow: 0px 1px 0px 0px;
+#theTime {
+    color: yellow;
+    border-radius: 50%;
+    position: relative;
 }
