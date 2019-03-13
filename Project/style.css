@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Concert+One|Nova+Mono');
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 body {
     height: 100%;
@@ -144,7 +144,6 @@ body {
     text-align: center;
     font-size: 70px;
     letter-spacing: 5px;
-    font-family: 'Nova Mono', monospace;
     color: #FFF; /*เอาสีดำลบแถวนี้*/
 }
 
