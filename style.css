@@ -9,6 +9,7 @@ body {
 }
 
 a {
+    text-decoration: none;
     background: rgba(255, 255, 255, 0.4);
     padding: 1%;
     border: 2px solid #86d9ff;
@@ -16,25 +17,36 @@ a {
     box-shadow: 0px 0px 20px #03A9F4;
     font-size: 4vh;
     color:hsl(187, 100%, 42%);
+    margin: 2px;
+    transition: 0.3s;
 }
 
 a:hover {
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 30px #03A9F4;
+    color: black;
 }
 
 #gameover a {
+    font-size: 5vh;
+    padding: 2%;
     border: 2px solid #e80000;
     box-shadow: 0px 0px 20px #ff0000;
     color: white;
-    text-shadow: 0px 0px 10px #ff0000;
+    transition: 0.3s;
 }
 
 #gamewin a {
+    font-size: 5vh;
+    padding: 2%;
     border: 2px solid #00e800;
     box-shadow: 0px 0px 20px #00ff00;
     color: white;
-    text-shadow: 0px 0px 10px #00ff00;
+    transition: 0.3s;
+}
+
+#gamewin a:hover, #gameover a:hover {
+    color: black;
 }
 
 #game {
@@ -49,6 +61,79 @@ a:hover {
     border: 2px solid #86d9ff;
     border-radius: 10px;
     box-shadow: 0px 0px 20px #03A9F4;
+}
+
+#preload {
+    display: none;
+    position: fixed;
+    top: calc(50% - 40vh);
+    left: 20%;
+    width: 60%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid #86d9ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #03A9F4;
+}
+
+
+#level {
+    display: none;
+    position: fixed;
+    top: calc(50% - 40vh);
+    left: 20%;
+    width: 60%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid #86d9ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #03A9F4;
+}
+
+.rightturn {
+    display: inline-block;
+    color: white;
+    width: 10%;
+    margin-top: 15%;
+    font-size: 10vmax;
+}
+
+.rightturn:hover {
+    color: black;
+}
+
+#statusmode {
+    display: inline-block;
+    color: black;
+    width: 60%;
+    font-size: 10vmax;
+    background: #00a800;
+    border: 1.5vmin solid white;
+    border-radius: 10px;
+    margin: 1%;
+    transition: 0.5s;
+}
+
+#statusmode:hover {
+    border: 2vmin solid white;
+}
+
+#statusmode[mode="easy"] {
+    background: #00a800;
+}
+
+#statusmode[mode="medium"] {
+    background: #e6e62e;
+}
+
+#statusmode[mode="hard"] {
+    background: #bd1010;
+}
+
+#statusmode[mode="expert"] {
+    background: linear-gradient(to right, #00a800, #e6e62e, #bd1010);
 }
 
 #mainmenu {

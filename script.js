@@ -1,25 +1,75 @@
-var buttonStart = document.querySelector("#buttonStart");
-var buttonHowto = document.querySelector("#buttonHowto");
 var words = document.querySelector(".words");
 var health = document.querySelector(".health");
 var myhealth = document.querySelector(".myhealth");
-var healthBar = document.querySelector(".healthBar");
-var wordsWrap = document.querySelector(".wordsWrap");
-var game = document.querySelector(".gamebox");
-var gamewin = document.querySelector(".gamewin");
-var menuLogo = document.querySelector(".menuLogo");
-var logo = document.querySelector(".logo");
+var mainmenu = document.getElementById("mainmenu");
+var preload = document.getElementById("preload");
+var level = document.getElementById("level");
+var statusmode = document.getElementById("statusmode");
+var startdelay = document.getElementById("startdelay");
+var game = document.getElementById("game");
+var gamewin = document.getElementById("gamewin");
+var gameover = document.getElementById("gameover");
+var gamebox = document.getElementById("gamebox");
 var spans;
 var bossHp;
 var myHp;
-var time = 3;
-var cd;
+var time;
+var mode;
+var timemode;
+var totaltime;
+var damage;
+var hit;
+
+function rightChange() {
+    mode = statusmode.getAttribute('mode');
+    if(mode == 'easy') {
+        statusmode.setAttribute('mode','medium');
+        statusmode.innerHTML = "Medium";
+    }
+    if(mode == 'medium') {
+        statusmode.setAttribute('mode','hard');
+        statusmode.innerHTML = "Hard";
+    }
+    if(mode == 'hard') {
+        statusmode.setAttribute('mode','expert');
+        statusmode.innerHTML = "Expert";
+    }
+    if(mode == 'expert') {
+        statusmode.setAttribute('mode','easy');
+        statusmode.innerHTML = "Easy";
+    }
+}
 
 function setGame() {
     bossHp = 100;
     health.style.width = 100 + "%";
     myHp = 100;
     myhealth.style.width = 100 + "%";
+    hit = 0;
+}
+
+function setMode(mode) {
+    console.log(mode);
+    mode = (mode == undefined) ? "easy": (mode == "easy") ? "medium": (mode == "medium") ? "hard": (mode == "hard") ? "expert": "easy";
+    console.log(mode);
+    if(mode == "easy") {
+        timemode = 4;
+        damage = 10;
+    }
+    else if(mode == "medium") {
+        timemode = 3;
+        damage = 15;
+    }
+    else if(mode == "hard") {
+        timemode = 2;
+        damage = 20;
+    }
+    else if(mode == "expert") {
+        timemode = 1;
+        damage = 25;
+    }
+    totaltime = timemode;
+    delaystart();
 }
 
 function random() {
@@ -33,6 +83,10 @@ function random() {
         words.appendChild(span);
     }
     spans = document.querySelectorAll(".span");
+    totaltime = timemode*Math.floor(wordArray.length/3);
+    if(totaltime == 0) {
+        totaltime = timemode;
+    }
 }
 
 function typing(e) {
@@ -53,14 +107,16 @@ function typing(e) {
             checker++;
         }
         if (checker === spans.length) {
+            hit = 1;
             document.removeEventListener("keydown", typing, false);
                     setTimeout(function(){
                         words.className = "words"; // restart the classes
                         random(); // give another word
+                        time = totaltime+1;
+                        hit = 0;
                         document.addEventListener("keydown", typing, false);
                     }, 400);
             bossHp -= 10;
-            time = 4;
             health.style.width = bossHp + "%";
         }
     }
@@ -68,24 +124,25 @@ function typing(e) {
 
 function check() {
     if (bossHp <= 0) {
-        document.getElementById("game").style.display = "none";
-        document.getElementById("gamewin").style.display = "block";
+        game.style.display = "none";
+        gamewin.style.display = "block";
         clearInterval(cd);
         bossHp = 100;
     }
     else if (myHp <= 0) {
-        document.getElementById("game").style.display = "none";
-        document.getElementById("gameover").style.display = "block";
+        game.style.display = "none";
+        gameover.style.display = "block";
         clearInterval(cd);
         myHp = 100;
     }
     requestAnimationFrame(check);
 }
 
-function countdown(){
+function countdown() {
+    time = totaltime;
     cd = setInterval(
         function(){
-            if (time > 0) {
+            if (time >= 0) {
                 time--;
                 updateTime();
             }
@@ -93,34 +150,45 @@ function countdown(){
                 clearInterval(cd);
             }
         }
-        ,1000)
+        ,1000);
 }
 
-function updateTime(){
+function updateTime() {
     theTime.innerText = time;
-    if (time == 0) {
-        myHp -= 10;
+    if (time <= 0 && hit == 0) {
+        myHp -= damage;
         myhealth.style.width = myHp + "%";
-        time = 4;
         random();
+        time = totaltime+1;
     }
+}
+
+function levelselect() {
+    mainmenu.style.display = "none";
+    game.style.display = "none";
+    gamebox.style.display = "none";
+    startdelay.style.display = "none";
+    gamewin.style.display = "none";
+    gameover.style.display = "none";
+    level.style.display = "block";
 }
 
 function delaystart() {
     var firstdelay = 2;
-    document.getElementById("mainmenu").style.display = "none";
-    document.getElementById("game").style.display = "block";
-    document.getElementById("gamebox").style.display = "none";
-    document.getElementById("startdelay").style.display = "block";
-    document.getElementById("gamewin").style.display = "none";
-    document.getElementById("gameover").style.display = "none";
+    level.style.display = "none";
+    mainmenu.style.display = "none";
+    gamebox.style.display = "none";
+    gamewin.style.display = "none";
+    gameover.style.display = "none";
+    game.style.display = "block";
+    startdelay.style.display = "block";
     ds = setInterval(
         function(){
             if (firstdelay <= 0) {
                 clearInterval(ds);
                 startgame();
-                document.getElementById("gamebox").style.display = "block";
-                document.getElementById("startdelay").style.display = "none";
+                startdelay.style.display = "none";
+                gamebox.style.display = "block";
                 startdelay.innerText = 3;
             }
             else{
@@ -128,14 +196,10 @@ function delaystart() {
                 firstdelay -= 1;
             }
         }
-        ,1000)
+        ,1000);
 }
 
 function startgame() {
-    document.getElementById("mainmenu").style.display = "none";
-    document.getElementById("game").style.display = "block";
-    document.getElementById("gamewin").style.display = "none";
-    document.getElementById("gameover").style.display = "none";
     setGame();
     random();
     check();
@@ -143,11 +207,11 @@ function startgame() {
     updateTime();
 }
 
-function menugame(){
-    document.getElementById("mainmenu").style.display = "block";
-    document.getElementById("game").style.display = "none";
-    document.getElementById("gamewin").style.display = "none";
-    document.getElementById("gameover").style.display = "none";
+function menugame() {
+    game.style.display = "none";
+    gamewin.style.display = "none";
+    gameover.style.display = "none";
+    mainmenu.style.display = "block";
 }
 
 document.addEventListener("keydown", typing, false);
