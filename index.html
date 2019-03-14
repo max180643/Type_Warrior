@@ -9,10 +9,10 @@
         <div id= "mainmenu">
             <div id="menu">
                 <img class="mainlogo" src="img/logo.png">
-                <a href="#Start" onclick="delaystart()">START</a>
-                <a href="#Howtoplay">HOW TO PLAY ?</a>
+                <a href="#Start" onclick="levelselect()">START</a>
+                <a href="#howtoplay">HOW TO PLAY ?</a>
             </div>
-            <div id="Howtoplay" class="overlay">
+            <div id="howtoplay" class="overlay">
               <div class="popup">
                 <h1>How to play</h1>
                 <p>1. Beat the monster by typing in words!</p>
@@ -21,6 +21,14 @@
                 <p>4. If you failed to type the word in time. You will get damaged. If your health hits zero. The game will be over!</p>
                 <a class="close" href="#Close">&times;</a>
               </div>
+            </div>
+        </div>
+
+        <div id="level">
+            <img src="img/logo.png" class="menuLogo">
+            <div>
+                <a id="statusmode" mode="easy" onclick="setMode(mode)">Easy</a>
+                <a class="rightturn" onclick="rightChange()"> > </a>
             </div>
         </div>
 
@@ -48,17 +56,22 @@
             </div>
         </div>
 
+        <div id="preload">
+            <img src="img/logo.png" class="menuLogo">
+            <!-- PIC DIE -->
+        </div>
+
         <div id="gamewin">
             <img src="img/logo.png" class="menuLogo">
             <h1 class="win">You Win</h1>
-            <a href="#Start" onclick="delaystart()">Play Again</a>
+            <a onclick="levelselect()">Play Again</a>
             <a href="#Menu" onclick="menugame()">Menu</a>
         </div>
 
         <div id="gameover">
             <img src="img/logo.png" class="menuLogo">
             <h1 class="lose">Game Over</h1>
-            <a href="#Start" onclick="delaystart()">Play Again</a>
+            <a onclick="levelselect()">Play Again</a>
             <a href="#Menu" onclick="menugame()">Menu</a>
         </div>
         <script src="word.js"></script>
