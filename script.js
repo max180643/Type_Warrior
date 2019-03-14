@@ -10,6 +10,10 @@ var game = document.getElementById("game");
 var gamewin = document.getElementById("gamewin");
 var gameover = document.getElementById("gameover");
 var gamebox = document.getElementById("gamebox");
+var monster_start = document.getElementById("monster_start");
+var monster_die = document.getElementById("monster_die");
+var myword = document.getElementById("myword");
+var timestatus = document.getElementById("timestatus");
 var spans;
 var bossHp;
 var myHp;
@@ -41,11 +45,18 @@ function rightChange() {
 }
 
 function setGame() {
+    mymonster = Math.floor(Math.random()*100)%4;
     bossHp = 100;
     health.style.width = 100 + "%";
     myHp = 100;
     myhealth.style.width = 100 + "%";
     hit = 0;
+    monster_start.src = "./img/Mons" + mymonster + ".gif";
+    monster_die.src = "./img/Mons" + mymonster + "-die.gif";
+    monster_start.style.display = "block";
+    myword.style.display = "block";
+    timestatus.style.display = "block";
+    monster_die.style.display = "none";
 }
 
 function setMode(mode) {
@@ -124,9 +135,15 @@ function typing(e) {
 
 function check() {
     if (bossHp <= 0) {
-        game.style.display = "none";
-        gamewin.style.display = "block";
+        monster_start.style.display = "none";
+        myword.style.display = "none";
+        timestatus.style.display = "none";
+        monster_die.style.display = "block";
         clearInterval(cd);
+        setTimeout(function() {
+            game.style.display = "none";
+            gamewin.style.display = "block";
+        }, 4000);
         bossHp = 100;
     }
     else if (myHp <= 0) {
