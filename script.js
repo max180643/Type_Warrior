@@ -54,7 +54,7 @@ function rightChange() {
 }
 
 function setGame() {
-    mymonster = Math.floor(Math.random()*100)%4;
+    mymonster = Math.floor(Math.random()*100)%6;
     bossHp = 100;
     health.style.width = 100 + "%";
     myHp = 100;
@@ -111,7 +111,6 @@ function random() {
 function typing(e) {
     typed = String.fromCharCode(e.which);
     sound_press();
-    console.log(typed);
     for (var i = 0; i < spans.length; i++) {
         if (spans[i].innerHTML === typed) { // if typed letter is the one from the word
             if (spans[i].classList.contains("bg")) { // if it already has class with the bacground color then check the next one
