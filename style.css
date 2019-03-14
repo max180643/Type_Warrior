@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 body {
     background-image: url(./img/bg.jpg);
     background-size: cover;
