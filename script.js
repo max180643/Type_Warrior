@@ -23,6 +23,14 @@ var timemode;
 var totaltime;
 var damage;
 var hit;
+var s_click = new Audio("./sound/1.click.wav");
+var s_countdown = new Audio("./sound/2.countdown.wav");
+var s_press = new Audio("./sound/3.press.wav");
+var s_damage = new Audio("./sound/4.damage.mp3");
+var s_hurt = new Audio("./sound/5.hurt.wav");
+var s_die = new Audio("./sound/6.die.wav");
+var s_win = new Audio("./sound/7.win.mp3");
+var s_gameover = new Audio("./sound/8.gameover.wav");
 
 function rightChange() {
     mode = statusmode.getAttribute('mode');
@@ -42,6 +50,7 @@ function rightChange() {
         statusmode.setAttribute('mode','easy');
         statusmode.innerHTML = "Easy";
     }
+    sound_click();
 }
 
 function setGame() {
@@ -78,6 +87,7 @@ function setMode(mode) {
         damage = 25;
     }
     totaltime = timemode;
+    sound_countdown();
     delaystart();
 }
 
@@ -100,6 +110,7 @@ function random() {
 
 function typing(e) {
     typed = String.fromCharCode(e.which);
+    sound_press();
     console.log(typed);
     for (var i = 0; i < spans.length; i++) {
         if (spans[i].innerHTML === typed) { // if typed letter is the one from the word
@@ -135,6 +146,7 @@ function typing(e) {
             document.removeEventListener("keydown", typing, false);
                     setTimeout(function(){
                         words.className = "words"; // restart the classes
+                        sound_damage();
                         random(); // give another word
                         time = totaltime+1;
                         hit = 0;
@@ -148,18 +160,21 @@ function typing(e) {
 
 function check() {
     if (bossHp <= 0) {
+        sound_die();
         monster_start.style.display = "none";
         myword.style.display = "none";
         timestatus.style.display = "none";
         monster_die.style.display = "block";
         clearInterval(cd);
         setTimeout(function() {
+            sound_win();
             game.style.display = "none";
             gamewin.style.display = "block";
         }, 4000);
         bossHp = 100;
     }
     else if (myHp <= 0) {
+        sound_gameover();
         game.style.display = "none";
         gameover.style.display = "block";
         clearInterval(cd);
@@ -188,6 +203,7 @@ function updateTime() {
     if (time <= 0 && hit == 0) {
         myHp -= damage;
         myhealth.style.width = myHp + "%";
+        sound_hurt();
         random();
         time = totaltime+1;
     }
@@ -201,6 +217,7 @@ function levelselect() {
     gamewin.style.display = "none";
     gameover.style.display = "none";
     level.style.display = "block";
+    sound_click();
 }
 
 function delaystart() {
@@ -222,6 +239,7 @@ function delaystart() {
                 startdelay.innerText = 3;
             }
             else{
+                sound_countdown();
                 startdelay.innerText = firstdelay;
                 firstdelay -= 1;
             }
@@ -238,10 +256,59 @@ function startgame() {
 }
 
 function menugame() {
+    sound_click();
     game.style.display = "none";
     gamewin.style.display = "none";
     gameover.style.display = "none";
     mainmenu.style.display = "block";
+}
+
+function sound_click() {
+    s_click.pause();
+    s_click.currentTime = 0;
+    s_click.play();
+}
+
+function sound_countdown() {
+    s_countdown.pause();
+    s_countdown.currentTime = 0;
+    s_countdown.play();
+}
+
+function sound_press() {
+    s_press.pause();
+    s_press.currentTime = 0;
+    s_press.play();
+}
+
+function sound_damage() {
+    s_damage.pause();
+    s_damage.currentTime = 0;
+    s_damage.play();
+}
+
+function sound_hurt() {
+    s_hurt.pause();
+    s_hurt.currentTime = 0;
+    s_hurt.play();
+}
+
+function sound_die() {
+    s_die.pause();
+    s_die.currentTime = 0;
+    s_die.play();
+}
+
+function sound_win() {
+    s_win.pause();
+    s_win.currentTime = 0;
+    s_win.play();
+}
+
+function sound_gameover() {
+    s_gameover.pause();
+    s_gameover.currentTime = 0;
+    s_gameover.play();
 }
 
 document.addEventListener("keydown", typing, false);
