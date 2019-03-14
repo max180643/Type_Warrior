@@ -1,3 +1,4 @@
+var spans, bossHp, myHp, time, mode, timemode, totaltime, damage, hit;
 var words = document.querySelector(".words");
 var health = document.querySelector(".health");
 var myhealth = document.querySelector(".myhealth");
@@ -14,15 +15,6 @@ var monster_start = document.getElementById("monster_start");
 var monster_die = document.getElementById("monster_die");
 var myword = document.getElementById("myword");
 var timestatus = document.getElementById("timestatus");
-var spans;
-var bossHp;
-var myHp;
-var time;
-var mode;
-var timemode;
-var totaltime;
-var damage;
-var hit;
 var s_click = new Audio("./sound/1.click.wav");
 var s_countdown = new Audio("./sound/2.countdown.wav");
 var s_press = new Audio("./sound/3.press.wav");
@@ -120,13 +112,13 @@ function typing(e) {
                 game.style.borderColor = "#8fff86";
                 game.style.boxShadow = "0px 0px 40px #42f403";
                 setTimeout(function() {
-                game.style.borderColor = "#86d9ff";
-                game.style.boxShadow = "0px 0px 20px #03A9F4";
+                    game.style.borderColor = "#86d9ff";
+                    game.style.boxShadow = "0px 0px 20px #03A9F4";
                 }, 1000);
                 break;
             }
         }
-        else if (spans[i].innerHTML !== typed){
+        if (spans[i].innerHTML !== typed){
             game.style.borderColor = "#ff8686";
             game.style.boxShadow = "0px 0px 40px #f40303";
             setTimeout(function() {
