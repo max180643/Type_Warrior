@@ -19,9 +19,9 @@ a {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.4);
     padding: 1%;
-    border: 2px solid #86d9ff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #03A9F4;
+    border: 10px solid #86d9ff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #03A9F4;
     font-size: 4vh;
     color:hsl(187, 100%, 42%);
     margin: 2px;
@@ -37,8 +37,8 @@ a:hover {
 #gameover a {
     font-size: 5vh;
     padding: 2%;
-    border: 2px solid #e80000;
-    box-shadow: 0px 0px 20px #ff0000;
+    border: 10px solid #e80000;
+    box-shadow: 0px 0px 100px #ff0000;
     color: white;
     transition: 0.3s;
 }
@@ -46,8 +46,8 @@ a:hover {
 #gamewin a {
     font-size: 5vh;
     padding: 2%;
-    border: 2px solid #00e800;
-    box-shadow: 0px 0px 20px #00ff00;
+    border: 10px solid #00e800;
+    box-shadow: 0px 0px 100px #00ff00;
     color: white;
     transition: 0.3s;
 }
@@ -65,9 +65,9 @@ a:hover {
     height: 80vh;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    border: 2px solid #86d9ff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #03A9F4;
+    border: 10px solid #86d9ff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #03A9F4;
 }
 
 #level {
@@ -79,9 +79,9 @@ a:hover {
     height: 80vh;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    border: 2px solid #86d9ff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #03A9F4;
+    border: 10px solid #86d9ff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #03A9F4;
 }
 
 .rightturn {
@@ -103,7 +103,7 @@ a:hover {
     font-size: 6vmax;
     background: #00a800;
     border: 1.5vmin solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     margin: 1%;
     transition: 0.5s;
 }
@@ -137,9 +137,9 @@ a:hover {
     height: 80vh;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    border: 2px solid #86d9ff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #03A9F4;
+    border: 10px solid #86d9ff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #03A9F4;
 }
 
 #menu {
@@ -179,9 +179,9 @@ a:hover {
     border-radius: 5px;
     width: 30%;
     height: 60%;
-    border: 2px solid #86d9ff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #03A9F4;
+    border: 10px solid #86d9ff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #03A9F4;
     position: relative;
     transition: all .5s ease-in-out;
 }
@@ -229,15 +229,15 @@ a:hover {
     height: 80vh;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    border: 2px solid #8fff86;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #42f403;
+    border: 10px solid #8fff86;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #42f403;
     font-size: 5vmax;
 }
 
 .win {
     color: white;
-    text-shadow: 0px 0px 50px #00ef00;
+    text-shadow: 0px 0px 250px #00ef00;
 }
 
 #gameover {
@@ -249,15 +249,15 @@ a:hover {
     height: 80vh;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    border: 2px solid #ff8686;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px #f40303;
+    border: 10px solid #ff8686;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px #f40303;
     font-size: 5vmax;
 }
 
 .lose {
     color: white;
-    text-shadow: 0px 0px 50px #ef0000;
+    text-shadow: 0px 0px 250px #ef0000;
 }
 
 .menuLogo {
