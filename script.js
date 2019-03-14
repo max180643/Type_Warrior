@@ -60,9 +60,7 @@ function setGame() {
 }
 
 function setMode(mode) {
-    console.log(mode);
     mode = (mode == undefined) ? "easy": (mode == "easy") ? "medium": (mode == "medium") ? "hard": (mode == "hard") ? "expert": "easy";
-    console.log(mode);
     if(mode == "easy") {
         timemode = 4;
         damage = 10;
@@ -102,14 +100,29 @@ function random() {
 
 function typing(e) {
     typed = String.fromCharCode(e.which);
+    console.log(typed);
     for (var i = 0; i < spans.length; i++) {
         if (spans[i].innerHTML === typed) { // if typed letter is the one from the word
             if (spans[i].classList.contains("bg")) { // if it already has class with the bacground color then check the next one
                 continue;
             } else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) { // if it dont have class, if it is not first letter or if the letter before it dont have class (this is done to avoid marking the letters who are not in order for being checked, for example if you have two "A"s so to avoid marking both of them if the first one is at the index 0 and second at index 5 for example)
                 spans[i].classList.add("bg");
+                game.style.borderColor = "#8fff86";
+                game.style.boxShadow = "0px 0px 40px #42f403";
+                setTimeout(function() {
+                game.style.borderColor = "#86d9ff";
+                game.style.boxShadow = "0px 0px 20px #03A9F4";
+                }, 1000);
                 break;
             }
+        }
+        else if (spans[i].innerHTML !== typed){
+            game.style.borderColor = "#ff8686";
+            game.style.boxShadow = "0px 0px 40px #f40303";
+            setTimeout(function() {
+                game.style.borderColor = "#86d9ff";
+                game.style.boxShadow = "0px 0px 20px #03A9F4";
+            }, 1000);
         }
     }
     var checker = 0;
