@@ -9,8 +9,8 @@
         <div id= "mainmenu">
             <div id="menu">
                 <img class="mainlogo" src="img/logo.png">
-                <a onclick="levelselect()">START</a>
-                <a href="#howtoplay" onclick="sound_click()">HOW TO PLAY ?</a>
+                <a onclick="levelSelect()">START</a>
+                <a href="#howtoplay" onclick="soundClick()">HOW TO PLAY ?</a>
             </div>
             <div id="howtoplay" class="overlay">
               <div class="popup">
@@ -19,14 +19,15 @@
                 <p>2. Complete the whole word to damage the the monsters.</p>
                 <p>3. Don't worry of your typo. DON'T BACKSPACE! Just finish your word in time.</p>
                 <p>4. If you failed to type the word in time. You will get damaged. If your health hits zero. The game will be over!</p>
-                <a class="close" href="#Close" onclick="sound_click()">&times;</a>
+                <p>5. If you type correctly one after the another, you will gain combo! You will gain a stacking 0.5 point multipiler for 10 consecutive correct input, but you will lose them if you type wrong!</p>
+                <a class="close" href="#Close" onclick="soundClick()">&times;</a>
               </div>
             </div>
         </div>
 
         <div id="level">
             <img src="img/logo.png" class="menuLogo">
-            <div>
+            <div class="mylevel">
                 <a id="statusmode" mode="easy" onclick="setMode(mode)">Easy</a>
                 <a class="rightturn" onclick="rightChange()"> > </a>
             </div>
@@ -64,15 +65,20 @@
         <div id="gamewin">
             <img src="img/logo.png" class="menuLogo">
             <h1 class="win">You Win</h1>
-            <a onclick="levelselect()">Play Again</a>
-            <a href="#Menu" onclick="menugame()">Menu</a>
+            <a onclick="levelSelect()">Play Again</a>
+            <a href="#Menu" onclick="menuGame()">Menu</a>
         </div>
 
         <div id="gameover">
             <img src="img/logo.png" class="menuLogo">
             <h1 class="lose">Game Over</h1>
-            <a onclick="levelselect()">Play Again</a>
-            <a href="#Menu" onclick="menugame()">Menu</a>
+            <a onclick="levelSelect()">Play Again</a>
+            <a href="#Menu" onclick="menuGame()">Menu</a>
+        </div>
+
+        <div id="score">
+            <div class="mycombo">Combo : <span id="updatecombo">0</span></div>
+            <div class="myscore"><span id="updatescore">0</span>Score</div>
         </div>
         <script src="word.js"></script>
         <script src="script.js"></script>
