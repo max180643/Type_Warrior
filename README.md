@@ -18,7 +18,7 @@ Play Game! : https://max180643.github.io/Type_Warrior/
 - Hard ถ้าหากพิมพ์คำไม่ทันเวลา 5 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 2 วินาที
 - Expert ถ้าหากพิมพ์คำไม่ทันเวลา 3 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 1 วินาที
 
-# Monster
+# Monsters 
 ![mon0](https://github.com/max180643/Type_Warrior/blob/master/img/Mons0.gif) 
 ![mon1](https://github.com/max180643/Type_Warrior/blob/master/img/Mons1.gif) 
 ![mon2](https://github.com/max180643/Type_Warrior/blob/master/img/Mons2.gif) <br>
