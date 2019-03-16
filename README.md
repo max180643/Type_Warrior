@@ -38,4 +38,4 @@ _____
 - นาย ณภัทร อารยวัฒนาพงษ์ 61070045
 - นาย ระพีพันธ์ มูนไทย 61070181
 _____
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://www.w3schools.com/html/) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://www.w3schools.com/css/) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://www.w3schools.com/js/)
