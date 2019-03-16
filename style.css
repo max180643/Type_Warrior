@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
+@import url('https://fonts.googleapis.com/css?family=Mitr');
 
 * {
     -webkit-user-select: none;
@@ -369,15 +370,24 @@ a:hover {
     margin: 0px;
 }
 
-.time {
-    margin: auto;
+#mytranslate {
+    font-family: 'Mitr', sans-serif;
     color: white;
+    margin: 0;
     font-size: 2vmax;
+    letter-spacing: 5px;
+}
+
+.time {
+    position: absolute;
+    right: 2vmax;
+    top: -1vmax;
+    color: white;
+    font-size: 2.5vmax;
 }
 
 #theTime {
     color: yellow;
-    border-radius: 50%;
     position: relative;
 }
 
