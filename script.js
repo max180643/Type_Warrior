@@ -198,13 +198,13 @@ function check() {
         monster_start.style.display = "none";
         myword.style.display = "none";
         timestatus.style.display = "none";
+        mytranslate.style.display = "none";
         monster_die.style.display = "block";
         gameend = true;
         clearInterval(cd);
         setTimeout(function() {
             soundWin();
             game.style.display = "none";
-            mytranslate.style.display = "none";
             gamewin.style.display = "block";
         }, 4000);
         bossHp = 100;
