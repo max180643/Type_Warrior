@@ -1,15 +1,16 @@
 # Type Warrior
-Project นี้ เป็นส่วนหนึ่งของวิชา 06016311 MULTIMEDIA TECHNOLOGY
+Project นี้ เป็นส่วนหนึ่งของวิชา Multimedia Technology (06016311)
 
-Play Game! : https://max180643.github.io/Type_Warrior/
+Play Game ! : https://max180643.github.io/Type_Warrior/
 
-# How to play
+# How to play ?
 ![sample](https://github.com/max180643/Type_Warrior/blob/master/img/sample.PNG)
-- เกมส์เอาชนะ Monstersโดยการพิมพ์คำตามตัวอักษรที่กำหนด
-- เมื่อพิมพ์คำครบทั้งหมดเรื่อยๆ เท่ากับการทำลาย Monsters
-- ห้ามใช้ Spacebar และไม่ต้องกังวลกับการพิมพ์ผิด แต่ต้องพิมพ์ให้จบตามเวลาที่กำหนด
-- หากพิมพ์ไม่ทันภายในเวลาที่กำหนด ผู้เล่นจะได้รับความเสียหาย และเมื่อค่าชีวิตของผู้เล่นเป็น 0 เกมส์จะจบลง โดยที่ผู้เล่นเป็นฝ่ายแพ้
-- Combo bonus จะคิดตามตัวที่กดถูก ถ้ากดผิดหรือหมดเวลา คะแนน Combo จะรีเซ็ตใหม่ และทุกๆ 10 Combo จะเพิ่มตัวคูณคะแนนทีละ 0.5
+- เกมเอาชนะ Monsters โดยการพิมพ์ตัวอักษรตามคำที่ถูกสุ่มขึ้นมา ภายในเวลาที่กำหนด
+- เมื่อพิมพ์ตัวอักษรครบทั้งหมด จะเป็นการโจมตี Monster
+- ไม่ต้องกังวลกับการพิมพ์ผิด ไม่ต้องสนใจ Spacebar แต่ต้องพิมพ์ให้ครบตามเวลาที่กำหนด
+- หากพิมพ์ไม่ทันภายในเวลาที่กำหนด ผู้เล่นจะได้รับความเสียหายจากการโจมตีของ Monster และเมื่อค่าชีวิตของผู้เล่นเป็น 0 เกมจะจบลง โดยที่ผู้เล่นเป็นฝ่ายแพ้
+- ถ้าผู้เล่นสามารถโจมตี Monster จนค่าชีวิตของ Monster เท่ากับ 0 เกมจะจบลง  โดยที่ผู้เล่นเป็นฝ่ายชนะ
+- Combo bonus จะคิดตามตัวที่พิมพ์ถูก แต่ถ้าพิมพ์ผิดหรือหมดเวลา คะแนน Combo จะถูกรีเซ็ตใหม่ และทุกๆ 10 Combo จะเพิ่มตัวคูณคะแนนทีละ 0.5
 
 # Level
 ![level](https://github.com/max180643/Type_Warrior/blob/master/img/samplelevel.PNG)
@@ -37,4 +38,4 @@ _____
 - นาย ณภัทร อารยวัฒนาพงษ์ 61070045
 - นาย ระพีพันธ์ มูนไทย 61070181
 _____
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
