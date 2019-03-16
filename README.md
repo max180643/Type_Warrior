@@ -14,10 +14,10 @@
 
 # Level
 ![level](https://github.com/max180643/Type_Warrior/blob/master/img/samplelevel.PNG)
-- Easy ถ้าหากพิมพ์คำไม่ทันเวลา 10 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 4 วินาที 
-- Medium ถ้าหากพิมพ์คำไม่ทันเวลา 7 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 3 วินาที
-- Hard ถ้าหากพิมพ์คำไม่ทันเวลา 5 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 2 วินาที
-- Expert ถ้าหากพิมพ์คำไม่ทันเวลา 3 ครั้ง ผู้เล่นจะโดน Damage ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 1 วินาที
+- Easy ถ้าหากพิมพ์คำไม่ทันเวลา 10 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 4 วินาที 
+- Medium ถ้าหากพิมพ์คำไม่ทันเวลา 7 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 3 วินาที
+- Hard ถ้าหากพิมพ์คำไม่ทันเวลา 5 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 2 วินาที
+- Expert ถ้าหากพิมพ์คำไม่ทันเวลา 4 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 1 วินาที
 
 # Monsters 
 ![mon0](https://github.com/max180643/Type_Warrior/blob/master/img/Mons0.gif) 
@@ -26,6 +26,7 @@
 ![mon3](https://github.com/max180643/Type_Warrior/blob/master/img/Mons3.gif) 
 ![mon4](https://github.com/max180643/Type_Warrior/blob/master/img/Mons4.gif) 
 ![mon5](https://github.com/max180643/Type_Warrior/blob/master/img/Mons5.gif) 
+
 _____
 # Team Member
 |<img src="README/hashtagSELFIE.jpeg" width="150px" height="150px">|<img src="README/chattida.jpg" width="150px" height="150px">|<img src="README/max180643.jpg" width="150px" height="150px">|<img src="README/NAPATKRUP.jpeg" width="150px" height="150px">|<img src="README/rapeeza1598.jpeg" width="150px" height="150px">|
