@@ -1,5 +1,5 @@
 # Type Warrior
-## Project นี้ เป็นส่วนหนึ่งของวิชา Multimedia Technology (06016311)
+### Project นี้ เป็นส่วนหนึ่งของวิชา Multimedia Technology (06016311)
 
 #### Play Game ! : https://max180643.github.io/Type_Warrior/
 
