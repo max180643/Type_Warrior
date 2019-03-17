@@ -43,6 +43,7 @@ a:hover {
 }
 
 #contact img {
+    opacity: 0.7;
     width: 8vmin;
     height: 8vmin;
     transition: 0.5s;
