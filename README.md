@@ -2,7 +2,7 @@
 ### Project นี้ เป็นส่วนหนึ่งของวิชา Multimedia Technology (06016311)
 
 #### Play Game ! : https://max180643.github.io/Type_Warrior/
-#### Youtube : Coming Soon !
+#### Youtube : https://youtu.be/fzvavjx-_F8
 
 # How to play ?
 ![sample](https://github.com/max180643/Type_Warrior/blob/master/img/sample.PNG)
