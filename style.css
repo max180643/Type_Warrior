@@ -35,6 +35,29 @@ a:hover {
     color: black;
 }
 
+#contact {
+    display: none;
+    position: fixed;
+    bottom: 5vmin;
+    right: 10vmin;
+}
+
+#contact img {
+    width: 8vmin;
+    height: 8vmin;
+    transition: 0.5s;
+}
+
+#contact img:hover {
+    transform: rotate(45deg);
+}
+
+#contact a {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
 #loadingstart {
     position: absolute;
     font-size: 3vmin;
@@ -62,9 +85,9 @@ a:hover {
     font-size: 6vmin;
     color: white;
     background: black;
-    border: 0px solid black;
+    border: none;
     text-shadow: 0px 0px 20px #03A9F4;
-    box-shadow: 0px 0px 0px black;
+    box-shadow: none;
     opacity: 0.7;
 }
 

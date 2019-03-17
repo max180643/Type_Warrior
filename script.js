@@ -4,6 +4,7 @@ var health = document.querySelector(".health");
 var myhealth = document.querySelector(".myhealth");
 var loadingstart = document.getElementById("loadingstart");
 var presshere = document.getElementById("presshere");
+var contact = document.getElementById("contact");
 var load = document.getElementById("load");
 var mainmenu = document.getElementById("mainmenu");
 var preload = document.getElementById("preload");
@@ -323,6 +324,7 @@ function menuGame() {
     gameover.style.display = "none";
     scoreboard.style.display = "none";
     mainmenu.style.display = "block";
+    contact.style.display = "block";
 }
 
 //Sound
