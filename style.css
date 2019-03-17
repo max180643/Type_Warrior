@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url(./img/bg.jpg);
+    background: black;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -33,6 +33,105 @@ a:hover {
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 30px #03A9F4;
     color: black;
+}
+
+#loadingstart {
+    position: absolute;
+    font-size: 3vmin;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 20px #03A9F4;
+    left: 0;
+    right: 0;
+    bottom: 10vmin;
+    opacity: 0.7;
+}
+
+#presshere {
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 20px #03A9F4;
+    left: 0;
+    right: 0;
+    bottom: 14vmin;
+}
+
+#presshere a {
+    font-size: 6vmin;
+    color: white;
+    background: black;
+    border: 0px solid black;
+    text-shadow: 0px 0px 20px #03A9F4;
+    box-shadow: 0px 0px 0px black;
+    opacity: 0.7;
+}
+
+#presshere a:hover {
+    color: yellow;
+}
+
+#load{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vmin;
+    height: 25vmin;
+}
+
+#load hr{
+    width: calc(40% - 8px);
+    height: calc(40% - 8px);
+    position: absolute;
+    border: 5px solid #86d9ff;
+    box-shadow: 0px 0px 10px #03A9F4;
+    border-radius: 25%;
+    animation:spin 2s ease infinite;
+}
+
+#load :nth-child(1){
+    background: #1c395b;
+    opacity: 0.7;
+    animation-delay: -1.5s;
+}
+
+#load :nth-child(2){
+    background: #3dff89;
+    opacity: 0.7;
+    animation-delay: -1s;
+}
+
+#load :nth-child(3){
+    background: #fffa76;
+    opacity: 0.7;
+    animation-delay: -0.5s;
+}
+
+#load :nth-child(4){
+    background: #ef692f;
+    opacity: 0.7;
+    animation-delay: 0s;
+}
+
+@keyframes spin{
+    0%, 100%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(160%);
+    }
+    50%{
+        transform: translate(160%, 160%);
+    }
+    75%{
+        transform: translate(0, 160%);
+    }
+}
+
+#preload {
+    display: none;
 }
 
 #gameover a {
@@ -134,7 +233,8 @@ a:hover {
 }
 
 #mainmenu {
-    display: block;
+    display: none;
+    animation: fadein 2.5s;
     position: fixed;
     top: calc(50% - 40vh);
     left: 20%;
@@ -146,6 +246,16 @@ a:hover {
     border-radius: 50px;
     box-shadow: 0px 0px 100px #03A9F4;
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 #menu {
     margin-top: 60vh;

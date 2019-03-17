@@ -1,7 +1,10 @@
-var spans, bossHp, myHp, time, mode, timemode, totaltime, damage, hit, correct, combo, score;
+var spans = 0, bossHp, myHp, time, mode, timemode, totaltime, damage, hit, correct, combo, score, myTime, gameend;
 var words = document.querySelector(".words");
 var health = document.querySelector(".health");
 var myhealth = document.querySelector(".myhealth");
+var loadingstart = document.getElementById("loadingstart");
+var presshere = document.getElementById("presshere");
+var load = document.getElementById("load");
 var mainmenu = document.getElementById("mainmenu");
 var preload = document.getElementById("preload");
 var level = document.getElementById("level");
@@ -28,6 +31,8 @@ var s_die = new Audio("./sound/6.die.wav");
 var s_win = new Audio("./sound/7.win.mp3");
 var s_gameover = new Audio("./sound/8.gameover.wav");
 var s_miss = new Audio("./sound/9.missed.wav");
+var s_music = new Audio("./sound/10.music.mp3");
+var s_coupe = new Audio("./sound/11.coupe.mp3");
 
 //Change mode
 function rightChange() {
@@ -194,6 +199,7 @@ function typing(e) {
 //Check Hp
 function check() {
     if (bossHp <= 0) {
+        s_coupe.pause();
         soundDie();
         monster_start.style.display = "none";
         myword.style.display = "none";
@@ -210,6 +216,7 @@ function check() {
         bossHp = 100;
     }
     else if (myHp <= 0) {
+        s_coupe.pause();
         soundGameover();
         game.style.display = "none";
         mytranslate.style.display = "none";
@@ -263,6 +270,7 @@ function levelSelect() {
     scoreboard.style.display = "none";
     level.style.display = "block";
     soundClick();
+    soundCoupe();
 }
 
 //Delay before start
@@ -305,7 +313,11 @@ function startGame() {
 
 //Set to Menu
 function menuGame() {
+    document.body.style.backgroundImage = "url('./img/bg.jpg')";
     soundClick();
+    soundMusic();
+    load.style.display = "none";
+    presshere.style.display = "none";
     game.style.display = "none";
     gamewin.style.display = "none";
     gameover.style.display = "none";
@@ -369,6 +381,28 @@ function soundMiss() {
     s_miss.pause();
     s_miss.currentTime = 0;
     s_miss.play();
+}
+
+function soundMusic() {
+    s_music.currentTime = 0;
+    s_music.play();
+    s_music.loop = true;
+}
+
+function soundCoupe() {
+    s_music.pause();
+    s_coupe.currentTime = 0;
+    s_coupe.play();
+}
+
+//Loading Page
+function myFunction() {
+    myTime = setTimeout(showPage, 500);
+}
+
+function showPage() {
+    loadingstart.style.display = "none";
+    presshere.style.display = "block";
 }
 
 document.addEventListener("keydown", typing, false);

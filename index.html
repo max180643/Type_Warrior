@@ -6,6 +6,14 @@
         <link rel="icon" type="image/ico" href="./img/icon.png" />
         <link rel="stylesheet" type="text/css" href="./style.css">
     </head>
+    <body onload="myFunction()">
+        <div id="loadingstart">
+            <h1>LOADING..</h1>
+        </div>
+        <div id="presshere"><a onclick="menuGame()">PRESS HERE</a></div>
+        <div id="load">
+            <hr/><hr/><hr/><hr/>
+        </div>
         <div id= "mainmenu">
             <div id="menu">
                 <img class="mainlogo" src="img/logo.png">
@@ -81,6 +89,37 @@
             <div class="mycombo">Combo : <span id="updatecombo">0</span></div>
             <div class="myscore"><span id="updatescore">0</span>Score</div>
         </div>
+
+        <div id="preload">
+            <img src="img/logo.png" class="menuLogo">
+            <img src="./img/bg.jpg">
+            <img src="img/cursor.png">
+            <img src="./img/Mons0.gif">
+            <img src="./img/Mons0-die.gif">
+            <img src="./img/Mons1.gif">
+            <img src="./img/Mons1-die.gif">
+            <img src="./img/Mons2.gif">
+            <img src="./img/Mons2-die.gif">
+            <img src="./img/Mons3.gif">
+            <img src="./img/Mons3-die.gif">
+            <img src="./img/Mons4.gif">
+            <img src="./img/Mons4-die.gif">
+            <img src="./img/Mons5.gif">
+            <img src="./img/Mons5-die.gif">
+        </div>
+        <audio preload="auto">
+            <source src="./sound/1.click.wav" type="audio/wav">
+            <source src="./sound/2.countdown.wav" type="audio/wav">
+            <source src="./sound/3.press.wav" type="audio/wav">
+            <source src="./sound/4.damage.mp3" type="audio/mpeg">
+            <source src="./sound/5.hurt.wav" type="audio/wav">
+            <source src="./sound/6.die.wav" type="audio/wav">
+            <source src="./sound/7.win.mp3" type="audio/mpeg">
+            <source src="./sound/8.gameover.wav" type="audio/wav">
+            <source src="./sound/9.missed.wav" type="audio/wav">
+            <source src="./sound/10.music.mp3" type="audio/mpeg">
+            <source src="./sound/11.coupe.mp3" type="audio/mpeg">
+        </audio>
         <script src="word.js"></script>
         <script src="thai.js"></script>
         <script src="script.js"></script>
