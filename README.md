@@ -1,11 +1,11 @@
-# Type Warrior ⌨️
+# Type Warrior
 ### Project นี้ เป็นส่วนหนึ่งของวิชา Multimedia Technology (06016311)
 
-#### Play Game ! : https://napatkrup.github.io/TypeWarrior/
+#### Play Game ! : https://max180643.github.io/TypeWarrior/
 #### Youtube : https://www.youtube.com/watch?v=fzvavjx-_F8
 
 # How to play ?
-![sample](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/sample.PNG)
+![sample](https://github.com/max180643/TypeWarrior/blob/master/img/sample.PNG)
 - เกมเอาชนะ Monsters โดยการพิมพ์ตัวอักษรตามคำที่ถูกสุ่มขึ้นมา ภายในเวลาที่กำหนด
 - เมื่อพิมพ์ตัวอักษรครบทั้งหมด จะเป็นการโจมตี Monster
 - ไม่ต้องกังวลกับการพิมพ์ผิด ไม่ต้องสนใจ Spacebar แต่ต้องพิมพ์ให้ครบตามเวลาที่กำหนด
@@ -14,19 +14,19 @@
 - Combo bonus จะคิดตามตัวที่พิมพ์ถูก แต่ถ้าพิมพ์ผิดหรือหมดเวลา คะแนน Combo จะถูกรีเซ็ตใหม่ และทุกๆ 10 Combo จะเพิ่มตัวคูณคะแนนทีละ 0.5
 
 # Level
-![level](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/samplelevel.PNG)
+![level](https://github.com/max180643/TypeWarrior/blob/master/img/samplelevel.PNG)
 - Easy ถ้าหากพิมพ์คำไม่ทันเวลา 10 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 4 วินาที
 - Medium ถ้าหากพิมพ์คำไม่ทันเวลา 7 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 3 วินาที
 - Hard ถ้าหากพิมพ์คำไม่ทันเวลา 5 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 2 วินาที
 - Expert ถ้าหากพิมพ์คำไม่ทันเวลา 4 ครั้ง ผู้เล่นจะเป็นฝ่ายแพ้ ซึ่งทุกๆ 3 ตัวอักษรจะมีเวลาในการพิมพ์ 1 วินาที
 
 # Monsters
-![mon0](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons0.gif)
-![mon1](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons1.gif)
-![mon2](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons2.gif)
-![mon3](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons3.gif)
-![mon4](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons4.gif)
-![mon5](https://github.com/NAPATKRUP/TypeWarrior/blob/master/img/Mons5.gif)
+![mon0](https://github.com/max180643/TypeWarrior/blob/master/img/Mons0.gif)
+![mon1](https://github.com/max180643/TypeWarrior/blob/master/img/Mons1.gif)
+![mon2](https://github.com/max180643/TypeWarrior/blob/master/img/Mons2.gif)
+![mon3](https://github.com/max180643/TypeWarrior/blob/master/img/Mons3.gif)
+![mon4](https://github.com/max180643/TypeWarrior/blob/master/img/Mons4.gif)
+![mon5](https://github.com/max180643/TypeWarrior/blob/master/img/Mons5.gif)
 
 # Reference
 - The Typing of the Dead
