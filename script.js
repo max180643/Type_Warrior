@@ -6,6 +6,7 @@ var loadingstart = document.getElementById("loadingstart");
 var presshere = document.getElementById("presshere");
 var contact = document.getElementById("contact");
 var load = document.getElementById("load");
+var loadsuccess = document.getElementById("loadsuccess");
 var mainmenu = document.getElementById("mainmenu");
 var preload = document.getElementById("preload");
 var level = document.getElementById("level");
@@ -40,19 +41,19 @@ function rightChange() {
     mode = statusmode.getAttribute('mode');
     if(mode == 'easy') {
         statusmode.setAttribute('mode','medium');
-        statusmode.innerHTML = "Medium";
+        statusmode.innerHTML = "MEDIUM";
     }
     if(mode == 'medium') {
         statusmode.setAttribute('mode','hard');
-        statusmode.innerHTML = "Hard";
+        statusmode.innerHTML = "HARD";
     }
     if(mode == 'hard') {
         statusmode.setAttribute('mode','expert');
-        statusmode.innerHTML = "Expert";
+        statusmode.innerHTML = "EXPERT";
     }
     if(mode == 'expert') {
         statusmode.setAttribute('mode','easy');
-        statusmode.innerHTML = "Easy";
+        statusmode.innerHTML = "EASY";
     }
     soundClick();
 }
@@ -108,7 +109,7 @@ function setMode(mode) {
 function random() {
     words.innerHTML = "";
     correct = 0;
-    var random = Math.floor(Math.random()*10000)%1943;
+    var random = Math.floor(Math.random()*100000)%3000;
     var wordArray = wordlist[random].split("");
     for (var i = 0; i < wordArray.length; i++) {
         var span = document.createElement("span");
@@ -323,6 +324,7 @@ function menuGame() {
     gamewin.style.display = "none";
     gameover.style.display = "none";
     scoreboard.style.display = "none";
+    loadsuccess.style.display = "none";
     mainmenu.style.display = "block";
     contact.style.display = "block";
 }
@@ -404,6 +406,8 @@ function myFunction() {
 
 function showPage() {
     loadingstart.style.display = "none";
+    load.style.display = "none";
+    loadsuccess.style.display = "block";
     presshere.style.display = "block";
 }
 
