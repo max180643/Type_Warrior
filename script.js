@@ -41,19 +41,19 @@ function rightChange() {
     mode = statusmode.getAttribute('mode');
     if(mode == 'easy') {
         statusmode.setAttribute('mode','medium');
-        statusmode.innerHTML = "MEDIUM";
+        statusmode.innerHTML = "Medium";
     }
     if(mode == 'medium') {
         statusmode.setAttribute('mode','hard');
-        statusmode.innerHTML = "HARD";
+        statusmode.innerHTML = "Hard";
     }
     if(mode == 'hard') {
         statusmode.setAttribute('mode','expert');
-        statusmode.innerHTML = "EXPERT";
+        statusmode.innerHTML = "Expert";
     }
     if(mode == 'expert') {
         statusmode.setAttribute('mode','easy');
-        statusmode.innerHTML = "EASY";
+        statusmode.innerHTML = "Easy";
     }
     soundClick();
 }
