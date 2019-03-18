@@ -249,15 +249,6 @@ a:hover {
     margin-top: 3vmax;
 }
 
-.titlelevel {
-    font-size: 7vmin;
-    color: white;
-    text-shadow: 0px 0px 20px #03A9F4;
-    position: absolute;
-    bottom: 1vmin;
-    right: 5vmin;
-}
-
 .rightturn {
     display: inline-block;
     color: white;
